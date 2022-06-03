@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+img{
+    width: 5em;
+    display: block;
+}
+.img-logo{
+    width: 7em;
+}
+/* header */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    height: 15em;
+}
+.main-content{
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 4px;
+    position: relative;
+    top: -80px;
+    /* line-height: 10em; */
+}
+
+.wraps{
+    display: flex;
+    justify-content: space-around;
+}
+
+.wraps > div{
+    display: flex;
+    margin: 25px 0;
+    padding: 20px 30px;
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    box-shadow: 2px 2px 10px rgb(203, 203, 203) ;
+}
+
+.wraps > div:hover{
+    box-shadow: 2px 2px 10px 3px rgb(122, 122, 122) ;
+}
+
+.wraps > div > h4{
+    margin: 20px 0 0 20px;
+}
+
+@media(max-width:950px){
+    .wraps{
+        flex-direction: column;
+    }
+    .wraps > div{
+        width: 80%;
+        margin: 25px auto;
+    }
+}
+@media(max-width:700px){
+    .main-content{
+        width: 100%;
+        border-radius: 0;
+    }
+    .wraps > div{
+        flex-direction: column;
+        width: 90%;
+    }
+    .wraps > div > h4{
+        margin: 7px 0 0 0;
+    }
+}
